@@ -44,7 +44,7 @@ function init() {
   scene = new THREE.Scene();
 
   camera = new THREE.PerspectiveCamera(50, window.innerWidth/window.innerHeight, 0.1, 100);
-  camera.position.set(1,3,3);
+  camera.position.set(1,3,-3);
 
   cameraControls = new THREE.OrbitControls(camera, renderer.domElement);
   cameraControls.target.set(0,0.5,0);
@@ -159,6 +159,7 @@ function loadScene() {
   pinza2.scale.z = -1;
   mano.add(pinza2);
 
+  mano.rotation.y =Math.PI
   gui = new dat.GUI();
   const g = gui.addFolder('Control Robot');
   g.add(controls, 'giroBase',       -180, 180).name('Giro Base').listen();
