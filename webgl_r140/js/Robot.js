@@ -196,10 +196,10 @@ function onKeyDown(e){
 
 function aplicarControles(){
   base.rotation.y  = deg2rad(controls.giroBase);
-  brazo.rotation.z = deg2rad(controls.giroBrazo);
+  brazo.rotation.x = deg2rad(controls.giroBrazo);
   abr.rotation.y   = deg2rad(controls.giroAntebrazoY);
   abr.rotation.z   = deg2rad(controls.giroAntebrazoZ);
-  mano.rotation.z  = Math.PI/2 + deg2rad(controls.rotacionPinzaZ);
+  mano.rotation.x  = deg2rad(controls.rotacionPinzaZ);
   const y = 0.065 + controls.sepPinza*0.005;
   pinza1.position.y =  y;
   pinza2.position.y = -y;
